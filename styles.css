@@ -1,0 +1,111 @@
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f4f4f4;
+    font-family: Arial, sans-serif;
+}
+
+
+.calculator-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+
+.number-container {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 240px;
+    height: auto;
+    justify-content: center;  /* Center numbers */
+    align-items: center;
+    gap: 5px;  /* Adds consistent spacing */
+}
+
+.operator-container {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 240px;
+    gap: 5px;  /* Adds consistent spacing */
+}
+
+.input-field-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 450px;
+}
+
+.input {
+    width: 100%;  /* Ensures full width inside the container */
+    max-width: 450px; /* Prevents it from becoming too large */
+    margin: 10px auto; /* Centers the input field */
+    text-align: right; /* Ensures numbers align to the right */
+    display: flex; /* Ensures proper centering */
+    color: #fff;
+    font: 700px;
+    background-color: black;
+    border: none;
+    border-radius: 10px;
+    box-shadow: inset 0px -4px 8px rgba(0, 0, 0, 0.2);
+}
+
+
+.numbers, 
+.operators {
+    display: flex;
+    height: 70px;
+    width: 70px;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    border: none;
+    border-radius: 10px;
+
+}
+
+.numbers {
+    background: #444;
+    color: white;
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.2);
+}
+
+.operators {
+    background: orange;
+    color: white;
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.2);
+}
+
+.operators:hover {
+    background: #e08600;
+}
+
+.numbers:hover {
+    background: #555;
+}
+
+.numbers.zero {
+    width: 145px; /* Adjust width to span two columns */
+    height: 70px; /* Keep height same as other buttons */
+    grid-column: span 2; /* Ensures it takes up two spaces in the grid */
+}
+
+
+.operators.operate {
+    width: 140px;
+}
+
+.clear:hover {
+    background: #e02a1d;
+}
